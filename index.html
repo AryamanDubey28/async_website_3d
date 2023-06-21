@@ -13,7 +13,7 @@
         left: 0;
         width: 100%;
         height: 60px;
-        background-color: #333;
+        background-color: #333333;
         box-shadow: 5px 5px 10px #1f08ec33;
         color: #fff;
         display: flex;
@@ -43,6 +43,17 @@
         margin-right: 50px;
         cursor: pointer; /* Add cursor pointer on hover */
       }
+
+      .app-bar-option a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .app-bar-title a {
+        text-decoration: none;
+        color: inherit;
+      }
+
     
       .app-bar-option:hover {
         background-color: #555; /* Add hover effect on options */
@@ -60,16 +71,21 @@
   <body>
      <div class="app-bar">
       <div class="app-bar-title">
-        ⏳
+        <a href="index.html">⏳</a>
       </div>
       <div class="app-bar-options">
-        <div class="app-bar-option">Contact Us ✉️</div>
-        <div class="app-bar-option">About 👋</div>
-        <div class="app-bar-option">News 📰</div>
+        <div class="app-bar-option">
+          <a href="contact.html">Contact Us ✉️</a>
+        </div>
+        <div class="app-bar-option">
+          <a href="about.html">About 👋</a>
+        </div>
+        <div class="app-bar-option">
+          <a href="news.html">News 📰</a>
+        </div>
       </div>
     </div>
        
-
     <canvas id = "bg"> </canvas>
     
     <main>
@@ -235,7 +251,7 @@ Sed consectetur ipsum in leo aliquam, in malesuada nisl faucibus. Nam et tristiq
       <footer>
         <div class="bottom-section">
           <h3>Async Studios⏳</h3>
-          <p>123 Main Street, City, Country</p>
+          <p>128 City Road, London, EC1V 2NX</p>
           <p>Social Media 1: ________</p>
           <p>Social Media 2: ________</p>
           <p>Social Media 3: ________</p>
