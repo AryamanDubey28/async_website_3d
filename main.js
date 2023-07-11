@@ -40,19 +40,18 @@ const controls = new OrbitControls(camera, renderer.domElement); //lets user con
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-const material = new THREE.MeshStandardMaterial({color: 0xffffff});
+  const material = new THREE.MeshStandardMaterial({color: 0xffffff});
   const star = new THREE.Mesh(geometry, material);
+
 
   const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
 
-
   star.position.set(x, y, z);
   scene.add(star);
-
 }
 
 
-Array(400).fill().forEach(addStar); //adds 400 stars to the scene, in random positions
+Array(500).fill().forEach(addStar); //adds 400 stars to the scene, in random positions
 
 const spaceTexture = new THREE.TextureLoader().load('black.jpg'); //makes a texture with a space background from the jpg installed
 scene.background = spaceTexture; //sets the scenes background to the space texture

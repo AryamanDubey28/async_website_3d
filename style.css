@@ -20,11 +20,12 @@ main {
   grid-template-columns: repeat(12,1fr);
 }
 
-h1,h2,h3,blockquote {
+h1,h2,blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
+
 
 canvas {
   position: fixed;
@@ -59,11 +60,12 @@ blockquote {
 }
 
 blockquote p {
-  color: black;
-  background-color: white;
+  color: rgb(255, 255, 255);
+  background-color: rgb(3, 3, 3);
+  box-shadow: 15px 15px 30px #0ee1e833;
   font-size: 4rem;
   display: inline;
-  line-height: 1;
+  line-height: 1.25;
 }
 
 .left {
