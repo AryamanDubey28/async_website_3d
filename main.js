@@ -49,14 +49,11 @@ const controls = new OrbitControls(camera, renderer.domElement); //lets user con
 //   star.position.set(x, y, z);
 //   scene.add(star);
 // }
-// Define the sphere and capsule geometries
-// Define the sphere and capsule geometries
-const sphereGeometry = new THREE.SphereGeometry(0.25, 24, 24);
-const capsuleGeometry = new THREE.CapsuleGeometry(0.2, 3, 0.5, 24, 1, true);
 
 function addStar() {
-  const material = new THREE.MeshStandardMaterial({ color: 0xffffff});
-  const star = new THREE.Mesh(sphereGeometry, material);
+  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const star = new THREE.Mesh(geometry, material);
 
   // Add a custom property to the star object to store the original color
   star.originalColor = material.color.clone();
@@ -66,32 +63,28 @@ function addStar() {
   star.position.set(x, y, z);
   scene.add(star);
 
-  // Modify the star's geometry and material when scrolling starts
+  // Modify the star's material color when scrolling starts
   star.scrollStart = function () {
     isScrolling = true;
-    scene.remove(star);
-    star.geometry = capsuleGeometry;
-    star.material = material;
-    star.rotation.set(Math.PI / 2, 0, 0); // Set rotation to lay down
-    scene.add(star);
+    material.color.set(0xffffff);
   };
 
-  // Modify the star's geometry and material when scrolling stops
+  // Reset the star's material color when scrolling stops
   star.scrollStop = function () {
     isScrolling = false;
-    scene.remove(star);
-    star.geometry = sphereGeometry;
-    star.material = material;
-    scene.add(star);
+    material.color.copy(star.originalColor);
   };
 
   // Add a slight random movement to the star when not scrolling
   star.move = function () {
     if (!isScrolling) {
-      star.position.z += THREE.MathUtils.randFloat(-0.02, 0.005);
+      star.position.z += THREE.MathUtils.randFloat(-0.005, 0.0005);
     }
   };
 }
+
+
+
 
 Array(600).fill().forEach(addStar); //adds 400 stars to the scene, in random positions
 

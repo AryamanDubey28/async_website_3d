@@ -18,6 +18,490 @@
         color: #fff;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        z-index: 999;
+        padding: 0 30px; /* Added padding around the options */
+      }
+
+      .app-bar-title {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .app-bar-options {
+        display: flex;
+        align-items: center;
+
+        padding: 0 50px;
+        text-align: right;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .app-bar-option {
+        margin-left: 10px;
+        margin-right: 50px;
+        cursor: pointer; /* Add cursor pointer on hover */
+      }
+
+      .app-bar-option a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .app-bar-title a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .app-bar-option:hover {
+        background-color: #555; /* Add hover effect on options */
+        padding: 5px 10px; /* Adjust padding on hover */
+        border-radius: 5px; /* Add rounded corners on hover */
+      }
+
+      /* CSS styles for the main content */
+      main {
+        margin-top: 60px; /* Adjust the margin top to accommodate the app bar */
+        margin-bottom: 20px; /* Adjust the margin bottom to accommodate the bottom bar */
+      }
+
+      h1 {
+        background: linear-gradient(to bottom right, rgb(5, 215, 243), white);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: large;
+      }
+
+      /* CSS styling for the form */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1a1a1a;
+        color: white;
+      }
+
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: calc(100vh - 180px); /* Adjust the height based on your needs */
+        padding: 20px;
+      }
+
+      .header-section {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .contact-form {
+        flex-basis: 50%;
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        background-color: #333333;
+        border-radius: 5px;
+      }
+
+      .contact-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #1a1a1a;
+        color: white;
+      }
+
+      .contact-form button {
+        padding: 12px 24px;
+        background-color: rgb(20, 116, 129);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background-color: rgb(5, 215, 243);
+      }
+
+      footer {
+        background-color: #333;
+        grid-column: 1 / span 12;
+      }
+
+      .bottom-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #222;
+        padding: 20px;
+        box-shadow: 5px 5px 10px #1f08ec33;
+      }
+
+      .bottom-section h3 {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      .bottom-section p {
+        font-size: 14px;
+        list-style: disc;
+        margin: 10px;
+        padding-left: 20px;
+        text-align: center;
+      }
+
+      .bottom-section h4 {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-bar">
+      <div class="app-bar-title">
+        <a href="index.html">⏳</a>
+      </div>
+      <div class="app-bar-options">
+        <div class="app-bar-option">
+          <a href="contact.html">Contact Us ✉️</a>
+        </div>
+        <div class="app-bar-option">
+          <a href="about.html">About 👋</a>
+        </div>
+        <div class="app-bar-option">
+          <a href="news.html">News 📰</a>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="bg"></canvas>
+
+    <main>
+      <section>
+        <div class="header-section">
+          <header>
+            <h1 class="header-title">Async Studios</h1>
+            <p class="header-quote">Message Us</p>
+          </header>
+        </div>
+
+        <div class="contact-form-container">
+          <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="bottom-section">
+          <h3>Async Studios⏳</h3>
+          <p>128 City Road, London, EC1V 2NX</p>
+          <p>Social Media 1: ________</p>
+          <p>Social Media 2: ________</p>
+          <p>Social Media 3: ________</p>
+          <h4>&copy; 2023 Async Studios. All rights reserved.</h4>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Studios</title>
+    <style>
+      /* CSS styles for the app bar */
+      .app-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #333;
+        box-shadow: 5px 5px 10px #1f08ec33;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 999;
+        padding: 0 30px; /* Added padding around the options */
+      }
+
+      .app-bar-title {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .app-bar-options {
+        display: flex;
+        align-items: center;
+
+        padding: 0 50px;
+        text-align: right;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .app-bar-option {
+        margin-left: 10px;
+        margin-right: 50px;
+        cursor: pointer; /* Add cursor pointer on hover */
+      }
+
+      .app-bar-option a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .app-bar-title a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .app-bar-option:hover {
+        background-color: #555; /* Add hover effect on options */
+        padding: 5px 10px; /* Adjust padding on hover */
+        border-radius: 5px; /* Add rounded corners on hover */
+      }
+
+      /* CSS styles for the main content */
+      main {
+        margin-top: 60px; /* Adjust the margin top to accommodate the app bar */
+        margin-bottom: 20px; /* Adjust the margin bottom to accommodate the bottom bar */
+      }
+
+      h1 {
+        background: linear-gradient(to bottom right, rgb(5, 215, 243), white);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* CSS styling for the form */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1a1a1a;
+        color: white;
+      }
+
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: calc(100vh - 180px); /* Adjust the height based on your needs */
+        padding: 20px;
+      }
+
+      .header-section {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .contact-form {
+        flex-basis: 50%;
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        background-color: #333333;
+        border-radius: 5px;
+      }
+
+      .contact-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #1a1a1a;
+        color: white;
+      }
+
+      .contact-form button {
+        padding: 12px 24px;
+        background-color: #1f08ec;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background-color: #1f08eccc;
+      }
+
+      footer {
+        background-color: #333;
+        grid-column: 1 / span 12;
+      }
+
+      .bottom-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #222;
+        padding: 20px;
+        box-shadow: 5px 5px 10px #1f08ec33;
+      }
+
+      .bottom-section h3 {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      .bottom-section p {
+        font-size: 14px;
+        list-style: disc;
+        margin: 10px;
+        padding-left: 20px;
+        text-align: center;
+      }
+
+      .bottom-section h4 {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-bar">
+      <div class="app-bar-title">
+        <a href="index.html">⏳</a>
+      </div>
+      <div class="app-bar-options">
+        <div class="app-bar-option">
+          <a href="contact.html">Contact Us ✉️</a>
+        </div>
+        <div class="app-bar-option">
+          <a href="about.html">About 👋</a>
+        </div>
+        <div class="app-bar-option">
+          <a href="news.html">News 📰</a>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="bg"></canvas>
+
+    <main>
+      <section>
+        <div class="header-section">
+          <header>
+            <h1>Async Studios</h1>
+            <p>Message Us</p>
+          </header>
+          <blockquote>
+            <p>
+              Get in touch with Async Studios today and let us turn your vision into reality.
+            </p>
+          </blockquote>
+        </div>
+        <div class="contact-form-container">
+          <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="bottom-section">
+          <h3>Async Studios⏳</h3>
+          <p>128 City Road, London, EC1V 2NX</p>
+          <p>Social Media 1: ________</p>
+          <p>Social Media 2: ________</p>
+          <p>Social Media 3: ________</p>
+          <h4>&copy; 2023 Async Studios. All rights reserved.</h4>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Studios</title>
+    <style>
+      /* CSS styles for the app bar */
+      .app-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #333;
+        box-shadow: 5px 5px 10px #1f08ec33;
+        color: #fff;
+        display: flex;
+        align-items: center;
         justify-content: space-between; 
         z-index: 999;
         padding: 0 30px; /* Added padding around the options */
@@ -107,20 +591,22 @@
         /* CSS styling for the form */
         body {
           font-family: Arial, sans-serif;
+          background-color: #1a1a1a;
+          color: white;
         }
-        
+    
         section {
-            text-align: center;
+          text-align: center;
+          padding: 20px;
         }
-
+    
         .contact-form {
           max-width: 800px;
           width: 80%;
-          margin: 20px auto;
+          margin: 0 auto;
           padding: 20px;
           background-color: #333333;
           border-radius: 5px;
-          color: white;
         }
     
         .contact-form h2 {
@@ -141,42 +627,46 @@
           margin-bottom: 16px;
           border: 1px solid #ccc;
           border-radius: 4px;
+          background-color: #1a1a1a;
+          color: white;
         }
     
         .contact-form button {
-          padding: 8px 16px;
-          background-color: #1f08ec33;
+          padding: 12px 24px;
+          background-color: #1f08ec;
           color: white;
           border: none;
           border-radius: 4px;
           cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
         }
     
         .contact-form button:hover {
-          background-color: #1f08ec33;
+          background-color: #1f08eccc;
         }
       </style>
      
 
-           <section>
-            <div class="contact-form-container">
-                <div class="contact-form">
-                  <h2>Contact Us</h2>
-                  <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-            
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-            
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-            
-                    <button type="submit">Submit</button>
-                  </form>
-                </div>
-              </div>
-           </section>
+     <section>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+  
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+  
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+  
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
         
       
       
@@ -237,4 +727,4 @@
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
   </body>
-</html>
+</html> -->
