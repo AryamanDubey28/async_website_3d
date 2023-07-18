@@ -2,8 +2,8 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
-import * as THREE from 'three'
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.117.1/build/three.module.js';
+import {OrbitControls} from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/controls/OrbitControls.js";
 
 
 //For Three.js, we need a scene, a camera, and a renderer.
@@ -96,17 +96,7 @@ const asyncTexture = new THREE.TextureLoader().load('async-logo-color.JPEG');
 const avatar = new THREE.Mesh(new THREE.BoxGeometry(3,3,3), new THREE.MeshBasicMaterial({map: asyncTexture}));
 
 
-// function moveCamera() {
-//   const t = document.body.getBoundingClientRect().top;
-//   avatar.rotation.y += 0.01;
-//   avatar.rotation.z += 0.01;
 
-
-//   camera.position.z = t * -0.01;
-//   camera.position.x = t * -0.0002;
-//   camera.position.y = t * -0.0002; 
-
-// }
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   avatar.rotation.y += 0.01;

@@ -1,6 +1,7 @@
 {
   "name": "async_website_3d",
-  "private": true,
+  "private": false,
+  "homepage": "https://asyncstudios.co.uk",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
